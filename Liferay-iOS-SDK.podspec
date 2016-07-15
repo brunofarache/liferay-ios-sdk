@@ -3,10 +3,10 @@ Pod::Spec.new do |s|
 	s.module_name			= "LRMobileSDK"
 	s.version				= "6.2.0.22"
 	s.summary				= "Build iOS apps for Liferay."
-	s.homepage				= "https://github.com/liferay/liferay-mobile-sdk"
+	s.homepage				= "https://github.com/brunofarache/liferay-ios-sdk"
 	s.license				= {
 								:type => "LPGL 2.1",
-								:file => "ios/copyright.txt"
+								:file => "LICENSE"
 							}
 	s.authors				= {
 								"Bruno Farache" => "bruno.farache@liferay.com"
@@ -14,13 +14,13 @@ Pod::Spec.new do |s|
 	s.platform				= :ios
 	s.ios.deployment_target	= '7.0'
 	s.source				= {
-								:git => "https://github.com/liferay/liferay-mobile-sdk.git",
+								:git => "https://github.com/brunofarache/liferay-ios-sdk.git",
 								:tag => "ios-6.2.0.22"
 							}
-	s.source_files			= "ios/Source/**/*.{h,m}"
+	s.source_files			= "Source/**/*.{h,m}"
 	s.resource_bundles		= {
 								"Liferay-iOS-SDK" => [
-									"ios/Source/Util/Localization/*.lproj"
+									"Source/Util/Localization/*.lproj"
 								]
 							}
 	s.requires_arc			= true
