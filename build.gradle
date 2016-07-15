@@ -1,16 +1,17 @@
-ext {
-	tasksGroup = 'Liferay'
+repositories {
+	mavenLocal()
+	jcenter()
+	mavenCentral()
 }
 
-allprojects {
-	repositories {
-		mavenLocal()
-		jcenter()
-		mavenCentral()
-	}
-}
+apply from: 'sdk-builder.gradle'
 
-apply from: 'modules.gradle'
+task zip(type: Zip) {
+	baseName = 'liferay-ios-sdk'
+	destinationDir = project.buildDir
+	version = project.version
+	from 'Source'
+}
 
 task wrapper(type: Wrapper) {
 	gradleVersion = '2.13'
